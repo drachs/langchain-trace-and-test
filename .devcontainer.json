@@ -1,0 +1,15 @@
+{
+    "name": "langchain-trace-and-test",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [9000],
+    "runArgs": ["--init"],
+    "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+    "runArgs": [ "--name", "langchain-trace-and-test"],
+    "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": []
+      }
+    }
+  }
